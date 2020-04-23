@@ -1,0 +1,42 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class produkt {
+private:
+    string nazwa;
+    float cena;
+public:
+    produkt (string nazwa, float cena) {
+        this->nazwa = nazwa;
+        this->cena = cena;
+    }
+
+    void WypiszInformacje ();
+};
+
+void produkt::WypiszInformacje() {
+    cout << "nazwa produktu: " << nazwa << endl;
+    cout << "cena: " << cena << endl;
+    cout << "---------" << endl;
+};
+
+int main()
+{
+    produkt *p1 = new produkt("laptop",2000);
+    produkt *p2 = new produkt("myszka",40);
+    produkt *p3 = new produkt("monitor",800);
+
+    p1->WypiszInformacje();
+    p2->WypiszInformacje();
+    p3->WypiszInformacje();
+
+    delete p1;
+    delete p2;
+    delete p3;
+
+    system ("Pause");
+    return 0;
+}
