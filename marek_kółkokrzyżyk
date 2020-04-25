@@ -1,0 +1,21 @@
+int main()
+{
+ 
+    for (int i = 0; i < 9; i++)
+    {
+        cleanboard();
+        board1();
+        board();
+        int move = get_move();
+        cout << "Wybrales: " << move << endl;
+        if (i % 2 == 0)
+        {
+            h[move - 1] = 'X';
+        }
+        else h[move - 1] = '0';
+        {
+ 
+        }
+    }
+    return 0;
+}
